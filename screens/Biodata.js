@@ -8,21 +8,23 @@
 
 import React, {Component} from 'react';
 import {  StyleSheet,  Text,  View,  Image, TextInput, TouchableOpacity} from 'react-native';
-import Judul from './Component/Judul';
+import Judul from '../Component/Judul';
 
 
 type Props = {};
 export default class App extends Component<Props> {
+	static navigatorStyle = {
+    navBarHidden: true,
+    tabBarHidden: true,
+  };
   render() {
     return (
       <View style={styles.container}>
         <Judul judul="Biodata "/>
-        <Judul judul="Login "/>
-        <Judul judul="Form "/>
         <Text style={styles.instructions}>Nama : Wulan Aprianingsih</Text>
         <Text style={styles.instructions}>Kelas : XI RPL 1</Text>
         <Text style={styles.instructions}>No Absen : 40</Text>
-        <Image source={require('./foto.png')}
+        <Image source={require('../foto.png')}
         style={{width: 300,height: 200}}
         />
       </View>

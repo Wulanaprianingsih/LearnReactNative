@@ -8,23 +8,25 @@
 
 import React, {Component} from 'react';
 import {  StyleSheet,  Text,  View,  Image, TextInput, TouchableOpacity} from 'react-native';
-import Judul from './Component/Judul';
+import Judul from '../Component/Judul';
 
 
 type Props = {};
 export default class App extends Component<Props> {
+  static navigatorStyle = {
+    navBarHidden: true,
+    tabBarHidden: true,
+  };
   render() {
     return (
       <View style={styles.container}>
-        <Judul judul="Biodata "/>
-        <Judul judul="Login "/>
-        <Judul judul="Form "/>
-        <Text style={styles.instructions}>Nama : Wulan Aprianingsih</Text>
-        <Text style={styles.instructions}>Kelas : XI RPL 1</Text>
-        <Text style={styles.instructions}>No Absen : 40</Text>
-        <Image source={require('./foto.png')}
-        style={{width: 300,height: 200}}
-        />
+        <TextInput/>
+        <TextInput/>
+        <TouchableOpacity onPress={()=>this.props.navigator.push({
+          screen: 'example.Biodata'
+        })}>
+          <Text style={{backgroundColor:'#fff'}}>Sign In</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#ea1f54',
   },
   welcome: {
     fontSize: 20,
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#f9f7f8',
     marginBottom: 5,
   },
 });
