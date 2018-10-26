@@ -10,10 +10,10 @@ class Judul extends Component {
 }
 const salon = {
     judul: {
-        color: '#fff',
+        color: '#47993c',
         fontSize : 20,
         fontWeight: 'bold',
-        backgroundColor: '#f00'
+        
     }
 }
 export default Judul;

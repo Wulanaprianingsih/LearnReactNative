@@ -20,12 +20,13 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
+        <Judul judul=" Aplikasi "/>
         <TextInput/>
         <TextInput/>
         <TouchableOpacity onPress={()=>this.props.navigator.push({
           screen: 'example.Biodata'
         })}>
-          <Text style={{backgroundColor:'#fff'}}>Sign In</Text>
+          <Text style={{backgroundColor:'#f9da21'}}>Sign In</Text>
         </TouchableOpacity>
       </View>
     );
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ea1f54',
+    backgroundColor: '#f9da21',
   },
   welcome: {
     fontSize: 20,
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
   },
   instructions: {
     textAlign: 'center',
-    color: '#f9f7f8',
+    color: '#f9f9f9',
     marginBottom: 5,
   },
 });
